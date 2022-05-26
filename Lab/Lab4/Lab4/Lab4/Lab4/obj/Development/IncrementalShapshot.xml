@@ -1,0 +1,341 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>Lab4</Database>
+    <Server>DESKTOP-LP2FGUT\MACIEKSQL</Server>
+    <ConnectionString>Data Source=DESKTOP-LP2FGUT\MACIEKSQL;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>wz6/4gUybCPRGmXkAyzOkF9I85I=30.03.2022 19:37:2030.03.2022 19:14:20</TimeStamp>
+        <ID>
+          <String>Adventure Works2019</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>F1HJKw6l5PDymI8tS2KMinhjhBU=13.04.2022 00:20:5613.04.2022 00:09:15</TimeStamp>
+        <ID>
+          <String>Adventure Works DW2019</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>sZ2VnuDhE4yZcd85gmte+WcFHwE=12.04.2022 21:36:4612.04.2022 21:33:32</TimeStamp>
+        <ID>
+          <String>Adventure Works2019</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>0Duhz5OrsKP0ueJ4lVmTcAPPXX4=12.04.2022 22:46:0812.04.2022 22:46:08</TimeStamp>
+        <ID>
+          <String>Adventure Works2019 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>V6IbJxtRovHWJwTDf2lTHCbJolQ=12.04.2022 23:12:4112.04.2022 23:12:41</TimeStamp>
+        <ID>
+          <String>Adventure Works2019 2</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>kXxQhN7eAOKonRmpwNrYGnKfOtA=13.04.2022 00:14:5013.04.2022 00:14:50</TimeStamp>
+        <ID>
+          <String>Adventure Works DW2019</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>0sjyBx/nvVhrajwitEaR1rPxuTg=13.04.2022 01:30:5113.04.2022 00:37:31</TimeStamp>
+        <ID>
+          <String>Adventure Works DW2019 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>vlzyfAjyuhB8buYJOsLHTNXFI88=13.04.2022 09:29:5213.04.2022 09:29:48</TimeStamp>
+        <ID>
+          <String>Adventure Works DW2019 2</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>9pwvKre/FJQbev5MHEBTBpOuHnA=12.04.2022 21:40:3812.04.2022 21:33:44</TimeStamp>
+        <ID>
+          <String>DIM CUSTOMER</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>1KSTJp1BetPfWLGy9gDv/Jz9FI8=12.04.2022 21:43:5312.04.2022 21:33:44</TimeStamp>
+        <ID>
+          <String>DIM TIME</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>L1yvfeap7NtlkZwVNZ0oXu445gY=12.04.2022 21:41:0812.04.2022 21:33:44</TimeStamp>
+        <ID>
+          <String>DIM SALESPERSON</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>9GT2GfP/9YpNmJ+20BB/qRKTQoU=12.04.2022 21:41:1912.04.2022 21:33:44</TimeStamp>
+        <ID>
+          <String>DIM PRODUCT</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>zGb5wtazVCuCaQrLOjFeb3fTa20=12.04.2022 22:58:3312.04.2022 22:47:19</TimeStamp>
+        <ID>
+          <String>DIM PRODUCT 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>64OVszCw9TxR3p3jMvBN27OfsZA=12.04.2022 22:58:4512.04.2022 22:47:19</TimeStamp>
+        <ID>
+          <String>DIM CUSTOMER 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>mRN7Vucewo3gEh/EYsM+IkHKwZk=12.04.2022 22:58:5512.04.2022 22:47:19</TimeStamp>
+        <ID>
+          <String>DIM TIME 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>EqB/q5uEXf7DjWp1MaRfvSmtDYw=12.04.2022 22:59:0412.04.2022 22:47:19</TimeStamp>
+        <ID>
+          <String>DIM SALESPERSON 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>ZLk81eJ+5mEGXxo7D+yConYhCAw=12.04.2022 23:24:5512.04.2022 23:13:13</TimeStamp>
+        <ID>
+          <String>DIM CUSTOMER 2</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>CSCUJQvLHYjWXs10o+uNpY61bxA=12.04.2022 23:25:3712.04.2022 23:13:13</TimeStamp>
+        <ID>
+          <String>DIM TIME 2</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>h3PJtzz4pLqTcgu0l0PkuHw5iWo=12.04.2022 23:25:1012.04.2022 23:13:13</TimeStamp>
+        <ID>
+          <String>DIM SALESPERSON 2</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>iYEO5PdzaS74zY/Jjnp9iXjEnq8=12.04.2022 23:25:4712.04.2022 23:13:13</TimeStamp>
+        <ID>
+          <String>DIM PRODUCT 2</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>wP62BIbkrtJBUDujg8P0Y8mFtzg=13.04.2022 00:17:0313.04.2022 00:15:09</TimeStamp>
+        <ID>
+          <String>Dim Promotion</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>JHWW2y471YRc2hAbQDOQjTrhG2g=13.04.2022 09:19:2213.04.2022 00:15:09</TimeStamp>
+        <ID>
+          <String>Dim Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>LgjmjJc30nqjcWOvAD6L6aBDkKA=13.04.2022 00:18:3413.04.2022 00:15:09</TimeStamp>
+        <ID>
+          <String>Dim Customer 3</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>fmj5Xw1DwmYpDRaZ0A1OFqTcCmU=13.04.2022 00:16:4713.04.2022 00:15:09</TimeStamp>
+        <ID>
+          <String>Dim Product 3</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>ymbHnPCjvaaoYONKOPuDHy9H8X0=13.04.2022 00:15:0913.04.2022 00:15:09</TimeStamp>
+        <ID>
+          <String>Fact Internet Sales</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>bS8fowvSCdAiPaY8OpndAxQtpyI=13.04.2022 00:38:1713.04.2022 00:37:51</TimeStamp>
+        <ID>
+          <String>Dim Date 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>KBJf9uDue+DuhYsAEyGhB271v7g=13.04.2022 00:38:2813.04.2022 00:37:51</TimeStamp>
+        <ID>
+          <String>Dim Sales Territory</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>PhzAX74Nlp/559QU4vFIFTx7pO0=13.04.2022 00:38:5813.04.2022 00:37:51</TimeStamp>
+        <ID>
+          <String>Dim Customer 4</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>cmY33x59NQVhbBLfXej54TY+ejk=13.04.2022 00:39:0513.04.2022 00:37:51</TimeStamp>
+        <ID>
+          <String>Dim Currency</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>OzFyxfKx7FwZ0kwZT0DQT6Ko/EY=13.04.2022 00:39:1913.04.2022 00:37:51</TimeStamp>
+        <ID>
+          <String>Dim Product 4</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>L2gPq0THMMmruSSn8H2BbBLvZV4=13.04.2022 00:37:5213.04.2022 00:37:51</TimeStamp>
+        <ID>
+          <String>Fact Internet Sales 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>ybbOTONac1yjmMl2RW40qLm8CP8=13.04.2022 09:33:0013.04.2022 09:30:19</TimeStamp>
+        <ID>
+          <String>Dim Promotion 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>rp4q8oAko5xqOEFhlKbA7UW7v4Q=13.04.2022 09:33:2113.04.2022 09:30:19</TimeStamp>
+        <ID>
+          <String>Dim Date 2</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>XgnVKvVLHQ/PNzZTj4A70UUJu4A=13.04.2022 09:37:1513.04.2022 09:30:19</TimeStamp>
+        <ID>
+          <String>Dim Sales Territory 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>+gWWbAcGNLEj4HWvic1kqJy5WPI=13.04.2022 09:34:2213.04.2022 09:30:19</TimeStamp>
+        <ID>
+          <String>Dim Customer 5</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>j2vq4TxakvjasHvrkDjIUnEDlFE=13.04.2022 09:34:4113.04.2022 09:30:19</TimeStamp>
+        <ID>
+          <String>Dim Currency 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>JK77F7Je8yhIqevpeBHQjiNI/D4=13.04.2022 09:35:4513.04.2022 09:30:19</TimeStamp>
+        <ID>
+          <String>Dim Product 5</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>h+RrsQjY/U1fsmQEN408lJ9NQZ4=13.04.2022 09:30:2013.04.2022 09:30:19</TimeStamp>
+        <ID>
+          <String>Fact Internet Sales 2</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>DdDHzM3YRblNpcKXg3M5/k6jtUc=20.04.2022 19:03:1712.04.2022 21:33:44TkwniSyppg2tstmpF5UFl8Mv3LA=12.04.2022 21:48:4712.04.2022 21:33:44</TimeStamp>
+        <ID>
+          <String>Adventure Works2019</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>jgIhGihscrZJ4TNEPbZ3s3S9noM=12.04.2022 22:59:0412.04.2022 22:47:19r4wckofOhmbyGI3YwzIX80uN+rs=12.04.2022 22:51:4312.04.2022 22:47:19</TimeStamp>
+        <ID>
+          <String>Adventure Works2019 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>8gpbFU+zRdaHay1s074xEkJ9BoM=13.04.2022 00:18:3413.04.2022 00:15:09MtTr1cwzwcll8IqFyD1BN5geOao=13.04.2022 00:15:0913.04.2022 00:15:09</TimeStamp>
+        <ID>
+          <String>Adventure Works DW2019</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>GMD3KcfA4F0tJdQt5jVbr4Vtdq8=13.04.2022 00:39:1913.04.2022 00:37:51RsdH5DuQiRCLi8SVKYv1WKT+un0=13.04.2022 00:37:5213.04.2022 00:37:51</TimeStamp>
+        <ID>
+          <String>Adventure Works DW2019 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>ylV3qq6BVruXWLWBTE/Nq4ql6PI=13.04.2022 09:37:1513.04.2022 09:30:19goNwvaAzfw8i/6Y9CZQ6M6T3bis=13.04.2022 09:30:1913.04.2022 09:30:19</TimeStamp>
+        <ID>
+          <String>Adventure Works DW2019 2</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>rCWQx6uFk/55nOBJaOmKfkDHpmY=12.04.2022 23:25:4712.04.2022 23:13:13k8GmNWAP/q0ghWt0lDrgop2YdEE=12.04.2022 23:23:4712.04.2022 23:13:13</TimeStamp>
+        <ID>
+          <String>Adventure Works2019 2</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>Hj31CTFttbK8GFYkCnoivLG+G6Y=30.03.2022 18:54:1730.03.2022 18:54:16</TimeStamp>
+      <ID>
+        <String>Lab4</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2022-04-20T17:03:49.546667Z</LastDeployed>
+</DeploymentSnapshot>

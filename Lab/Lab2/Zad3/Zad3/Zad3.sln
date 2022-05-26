@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31229.75
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Zad3", "Zad3\Zad3.dtproj", "{BAC23A0E-F90E-4E16-9CB0-B8BFFB2B2F68}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAC23A0E-F90E-4E16-9CB0-B8BFFB2B2F68}.Development|Default.ActiveCfg = Development
+		{BAC23A0E-F90E-4E16-9CB0-B8BFFB2B2F68}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2134E037-85E2-47BE-A7D1-29D02E1886A7}
+	EndGlobalSection
+EndGlobal

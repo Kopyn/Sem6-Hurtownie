@@ -1,0 +1,87 @@
+--Zad1
+
+
+--Zad2
+SELECT YEAR(s.OrderDate) AS Rok, MONTH(s.OrderDate) AS Miesiac, COUNT(DISTINCT s.CustomerId) AS "Roczni klienci"
+FROM Sales.SalesOrderHeader s
+GROUP BY YEAR(s.OrderDate), MONTH(s.OrderDate)
+ORDER BY 1, 2;
+
+SELECT Rok, [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12]
+FROM (
+SELECT DISTINCT YEAR(s.OrderDate) AS Rok, MONTH(s.OrderDate) AS Miesiac, s.CustomerId AS "Roczni klienci"
+FROM Sales.SalesOrderHeader s) AS summary
+PIVOT(
+COUNT("Roczni klienci") 
+FOR Miesiac IN ([1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12])) AS P
+ORDER BY 1;
+
+
+
+--Zad3
+SELECT p.FirstName + ' ' + p.LastName AS "Imie i nazwisko", YEAR(Sales.SalesOrderHeader.OrderDate), COUNT(Sales.SalesOrderHeader.SalesOrderID) AS "Liczba transakcji"
+FROM Person.Person p
+JOIN Sales.SalesPerson ON Sales.SalesPerson.BusinessEntityID = p.BusinessEntityID
+JOIN Sales.SalesOrderHeader ON Sales.SalesOrderHeader.SalesPersonID = Sales.SalesPerson.BusinessEntityID
+GROUP BY p.FirstName + ' ' + p.LastName, YEAR(Sales.SalesOrderHeader.OrderDate);
+
+
+SELECT "Imie i nazwisko", [2011], [2012], [2013], [2014]
+FROM (
+SELECT p.FirstName + ' ' + p.LastName AS "Imie i nazwisko", YEAR(Sales.SalesOrderHeader.OrderDate) AS Rok, Sales.SalesOrderHeader.SalesOrderID AS "Liczba transakcji"
+FROM Person.Person p
+JOIN Sales.SalesPerson ON Sales.SalesPerson.BusinessEntityID = p.BusinessEntityID
+JOIN Sales.SalesOrderHeader ON Sales.SalesOrderHeader.SalesPersonID = Sales.SalesPerson.BusinessEntityID) AS summary
+PIVOT(
+COUNT("Liczba transakcji")
+FOR Rok IN ([2011], [2012], [2013], [2014])) AS P;
+
+
+--Zad4
+SELECT YEAR(Sales.SalesOrderHeader.OrderDate) AS Rok, MONTH(Sales.SalesOrderHeader.OrderDate) AS Miesiąc, DAY(Sales.SalesOrderHeader.OrderDate) AS Dzień, 
+SUM(Sales.SalesOrderHeader.TotalDue) AS Suma, COUNT(DISTINCT Sales.SalesOrderDetail.ProductID) AS "Liczba różnych produktów"
+FROM Sales.SalesOrderHeader
+JOIN Sales.SalesOrderDetail ON Sales.SalesOrderDetail.SalesOrderID = Sales.SalesOrderHeader.SalesOrderID
+GROUP BY YEAR(Sales.SalesOrderHeader.OrderDate), MONTH(Sales.SalesOrderHeader.OrderDate), DAY(Sales.SalesOrderHeader.OrderDate)
+ORDER BY 1, 2, 3;
+
+
+--Zad5
+--miesiące
+
+SET DATEFIRST 1;
+SELECT CASE
+	WHEN MONTH(Sales.SalesOrderHeader.OrderDate) = 1 THEN 'Styczeń'
+	WHEN MONTH(Sales.SalesOrderHeader.OrderDate) = 2 THEN 'Luty'
+	WHEN MONTH(Sales.SalesOrderHeader.OrderDate) = 3 THEN 'Marzec'
+	WHEN MONTH(Sales.SalesOrderHeader.OrderDate) = 4 THEN 'Kwiecień'
+	WHEN MONTH(Sales.SalesOrderHeader.OrderDate) = 5 THEN 'Maj'
+	WHEN MONTH(Sales.SalesOrderHeader.OrderDate) = 6 THEN 'Czerwiec'
+	WHEN MONTH(Sales.SalesOrderHeader.OrderDate) = 7 THEN 'Lipiec'
+	WHEN MONTH(Sales.SalesOrderHeader.OrderDate) = 8 THEN 'Sierpień'
+	WHEN MONTH(Sales.SalesOrderHeader.OrderDate) = 9 THEN 'Wrzesień'
+	WHEN MONTH(Sales.SalesOrderHeader.OrderDate) = 10 THEN 'Październik'
+	WHEN MONTH(Sales.SalesOrderHeader.OrderDate) = 11 THEN 'Listopad'
+	WHEN MONTH(Sales.SalesOrderHeader.OrderDate) = 12 THEN 'Grudzień'
+	ELSE NULL
+END Miesiąc,
+CASE
+	WHEN DATEPART(dw, Sales.SalesOrderHeader.OrderDate) = 1 THEN 'Poniedziałek'
+	WHEN DATEPART(dw, Sales.SalesOrderHeader.OrderDate) = 2 THEN 'Wtorek'
+	WHEN DATEPART(dw, Sales.SalesOrderHeader.OrderDate) = 3 THEN 'Środa'
+	WHEN DATEPART(dw, Sales.SalesOrderHeader.OrderDate) = 4 THEN 'Czwartek'
+	WHEN DATEPART(dw, Sales.SalesOrderHeader.OrderDate) = 5 THEN 'Piątek'
+	WHEN DATEPART(dw, Sales.SalesOrderHeader.OrderDate) = 6 THEN 'Sobota'
+	WHEN DATEPART(dw, Sales.SalesOrderHeader.OrderDate) = 7 THEN 'Niedziela'
+	ELSE NULL
+END Dzień,
+SUM(Sales.SalesOrderHeader.TotalDue) AS Suma, COUNT(DISTINCT Sales.SalesOrderDetail.ProductID) AS "Liczba różnych produktów"
+FROM Sales.SalesOrderHeader
+JOIN Sales.SalesOrderDetail ON Sales.SalesOrderDetail.SalesOrderID = Sales.SalesOrderHeader.SalesOrderID
+GROUP BY MONTH(Sales.SalesOrderHeader.OrderDate), DATEPART(dw, Sales.SalesOrderHeader.OrderDate)
+ORDER BY MONTH(Sales.SalesOrderHeader.OrderDate), DATEPART(dw, Sales.SalesOrderHeader.OrderDate);
+
+--
+
+
+

@@ -1,0 +1,105 @@
+--2.1
+
+SELECT 
+{
+	[Measures].[Customer ID Distinct Count]
+} ON COLUMNS,
+{
+	[DIM CUSTOMER].[Country Region Code].CHILDREN
+} ON ROWS
+FROM [Adventure Works2019];
+
+--2.2
+
+SELECT 
+{
+	[DIM CUSTOMER].[Country Region Code].CHILDREN
+} ON COLUMNS,
+{
+	[Order Date].[Year].&[2012], 
+	[Order Date].[Year].&[2013]
+} ON ROWS
+FROM [Adventure Works2019]
+WHERE 
+{
+	[Measures].[Customer ID Distinct Count]
+};
+
+--2.3
+
+SELECT 
+{
+	{[Order Date].[Year].&[2012], 
+	[Order Date].[Year].&[2013]}
+	*
+	{[Measures].[Order Qty], 
+	[Measures].[Customer ID Distinct Count]}
+} ON COLUMNS,
+{
+	[DIM CUSTOMER].[Country Region Code].CHILDREN
+} ON ROWS
+FROM [Adventure Works2019];
+
+--2.4
+
+SELECT 
+{
+	[DIM CUSTOMER].[Country Region Code].CHILDREN
+} ON COLUMNS,
+{
+	{[DIM PRODUCT].[Category Name].CHILDREN}
+	*
+	{[DIM PRODUCT].[Sub Category Name].CHILDREN}
+} ON ROWS 
+FROM [Adventure Works2019];
+
+--2.5
+
+SELECT 
+{
+	
+} ON COLUMNS,
+{
+	ORDER (
+	FILTER([DIM PRODUCT].[Sub Category Name].CHILDREN, [Measures].[Product ID Distinct Count] > 10),
+	[Measures].[Order Qty], DESC
+)
+} ON ROWS
+FROM [Adventure Works2019];
+
+--2.6
+
+
+--4
+WITH MEMBER [Measures].[MonthNumber] AS [Order Date].[Month].CurrentMember.Name
+SELECT {
+[Measures].[MonthNumber], [Measures].[Order Qty]
+} ON COLUMNS,
+{
+HEAD(ORDER({[Order Date].[Year].&[2013]}*{DESCENDANTS([Order Date].[Hierarchy], 4)}, [Measures].[Order Qty], BDESC), 1)
+}
+ON ROWS
+FROM [Adventure Works2019];
+
+WITH MEMBER [Measures].[MonthNumber] AS [Order Date].[Month].CurrentMember.Name
+SELECT {
+[Measures].[MonthNumber], [Measures].[Order Qty]
+} ON COLUMNS,
+{
+HEAD(ORDER({[Order Date].[Year].&[2013]}*{DESCENDANTS([Order Date].[Hierarchy], 4)}, [Measures].[Order Qty], BDESC), 1)
+}
+ON ROWS
+FROM [Adventure Works2019];
+
+WITH MEMBER [Measures].[MonthNumber] AS [Order Date].[Month].CurrentMember.Name
+SELECT 
+{
+{[DIM PRODUCT].[Category Name].MEMBERS} * {[Measures].[Order Qty]} 
+} ON COLUMNS, 
+{
+ORDER(
+{{[Order Date].[Year].CHILDREN} *
+{[Order Date].[Month].CHILDREN}},
+[Measures].[Order Qty], ASC)
+} ON ROWS
+FROM [Adventure Works2019];

@@ -1,0 +1,38 @@
+CREATE DATABASE Uslugi;
+
+CREATE TABLE Klient (
+	KlientID INT PRIMARY KEY IDENTITY(1, 1),
+	FirstName VARCHAR(50) CHECK(FirstName != '') NOT NULL,
+	LastName VARCHAR(50) CHECK(LastName != '') NOT NULL,
+);
+
+CREATE TABLE Sklep (
+	SklepID INT PRIMARY KEY IDENTITY(1, 1),
+	Nazwa NVARCHAR(50) CHECK(Nazwa != '') NOT NULL,
+);
+
+CREATE TABLE Produkt (
+	ProduktID INT PRIMARY KEY IDENTITY(1, 1),
+	Nazwa NVARCHAR(50) CHECK(Nazwa != '') NOT NULL
+);
+
+CREATE TABLE KlientSklep (
+	ZakupyID INT PRIMARY KEY IDENTITY(1, 1),
+	DataZakupow DATETIME CHECK(DataZakupow > GETDATE()) NOT NULL,
+	KlientID INT FOREIGN KEY REFERENCES Klient(KlientID),
+	SklepID INT FOREIGN KEY REFERENCES Sklep(SklepID)
+);
+
+CREATE TABLE SklepProdukt (
+	SklepID INT FOREIGN KEY REFERENCES Sklep(SklepID),
+	ProduktID INT FOREIGN KEY REFERENCES Produkt(ProduktID),
+	Liczba INT CHECK(Liczba >= 0) NOT NULL,
+	Cena INT CHECK(Cena > 0) NOT NULL
+	CONSTRAINT PK_SklepProdukt PRIMARY KEY (SklepID, ProduktID)
+);
+
+CREATE TABLE KlientSklepProdukt (
+	ZakupyID INT PRIMARY KEY IDENTITY(1, 1),
+	Ilosc INT CHECK(Ilosc > 0) NOT NULL,
+	Cena INT CHECK(Cena > 0) NOT NULL
+);

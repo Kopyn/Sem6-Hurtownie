@@ -1,0 +1,89 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>Kostka5</Database>
+    <Server>DESKTOP-LP2FGUT\MACIEKSQL</Server>
+    <ConnectionString>Data Source=DESKTOP-LP2FGUT\MACIEKSQL;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>BNa3S12hQV0l9XLpQ0Swe/R01mU=26.05.2022 17:17:2226.05.2022 17:17:22</TimeStamp>
+        <ID>
+          <String>Aviation Db</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>PMD9hu8vSp2VwtWOfZmwvwtzQ1s=26.05.2022 17:18:3026.05.2022 17:18:30</TimeStamp>
+        <ID>
+          <String>Aviation Db</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>x418gr/BKRn0hYoQwgIprfgm+68=26.05.2022 17:19:2026.05.2022 17:18:43</TimeStamp>
+        <ID>
+          <String>DIM CONDITIONS1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>/OHFU+2UnV7+mlV8TAkuLMk0/cg=26.05.2022 17:19:2026.05.2022 17:18:44</TimeStamp>
+        <ID>
+          <String>DIM TIME1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>lcdyP1yut1rhOtahnmVjEY8aMYM=26.05.2022 17:19:2126.05.2022 17:18:44</TimeStamp>
+        <ID>
+          <String>DIM PLACE1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>fbucC+NDF+2j9R/CH2MSjKt++28=26.05.2022 17:19:2126.05.2022 17:18:44</TimeStamp>
+        <ID>
+          <String>DIM ACCIDENT1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>p1UMHxp5ZAtt3tLfGhuk9flbd0E=26.05.2022 17:19:2126.05.2022 17:18:44</TimeStamp>
+        <ID>
+          <String>DIM PLANE1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>WUWK9PN1n+Esyu/AtM2FfNv7iyE=26.05.2022 17:39:5726.05.2022 17:18:43n0peM/5ANBZBlyrxBddtNpzI0Z0=26.05.2022 17:39:5726.05.2022 17:18:43</TimeStamp>
+        <ID>
+          <String>Aviation Db</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>4L7iUxTXhBb4BogGjww/Okkf8mE=26.05.2022 17:16:0026.05.2022 17:16:00</TimeStamp>
+      <ID>
+        <String>Kostka5</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2022-05-26T15:40:08.27Z</LastDeployed>
+</DeploymentSnapshot>
